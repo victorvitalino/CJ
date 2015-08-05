@@ -4,6 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       t.references :post_category, index: true, foreign_key: true
       t.references :author, index: true, foreign_key: true
       t.string :title
+      t.string :slug, unique: true
       t.text :content
       t.string :meta
       t.string :unique_code

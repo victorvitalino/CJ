@@ -6,36 +6,18 @@
     %hr/
     / Post Content
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.
-    %hr/
     .row
       .col-md-12
         %h2
-          %b Colunistas da Semana
+          %b Colunistas Destaque
+    %hr/
     .row
-      .col-md-6.article-home
+      .col-md-12.article-home
         .row
-          .col-md-4
-            %img.img-responsive{:alt => "", :src => "http://placehold.it/900x300"}/
-          .col-md-8
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante interdum, mattis ante sit amet, elementum purus. Maecenas sed accumsan ipsum.
-      .col-md-6.article-home
-        .row
-          .col-md-4
-            %img.img-responsive{:alt => "", :src => "http://placehold.it/900x300"}/
-          .col-md-8
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante interdum, mattis ante sit amet, elementum purus. Maecenas sed accumsan ipsum.
-      .col-md-6.article-home
-        .row
-          .col-md-4
-            %img.img-responsive{:alt => "", :src => "http://placehold.it/900x300"}/
-          .col-md-8
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante interdum, mattis ante sit amet, elementum purus. Maecenas sed accumsan ipsum.
-      .col-md-6.article-home
-        .row
-          .col-md-4
-            %img.img-responsive{:alt => "", :src => "http://placehold.it/900x300"}/
-          .col-md-8
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante interdum, mattis ante sit amet, elementum purus. Maecenas sed accumsan ipsum.
+          - 6.times do
+            .col-md-2
+              %img.img-responsive{:alt => "", :src => "http://placehold.it/900x300"}/
+
     %br/
     .row
       .col-md-12
@@ -59,7 +41,7 @@
           %b Jurisprudência
     %hr/
     .row
-      - @posts.includes('post_categories').where('post_categories.name = ?', 'jurisprudência').limit(4).each do |post|
+      - @posts.joins(:post_category).where('post_categories.name = ?', 'jurisprudência').limit(4).each do |post|
         .col-md-6.article-home
           .row
             .col-md-4

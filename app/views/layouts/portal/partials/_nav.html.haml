@@ -8,16 +8,14 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{:href => "#"} Start Bootstrap
+      %a.navbar-brand{:href => "#"} Conteúdo Jurídico
     / Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav
         %li
-          %a{:href => "#"} About
+          %a{:href => "#"} Minha Assinatura
         %li
-          %a{:href => "#"} Services
-        %li
-          %a{:href => "#"} Contact
+          %a{:href => "#"} Área do Estudante
     / /.navbar-collapse
   / /.container
 %nav.navbar-sub
@@ -33,11 +31,26 @@
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav
         %li
-          %a{:href => "#"} About
+          %a{:href => "#{portal_root_path}"} Início
         %li
-          %a{:href => "#"} Services
+          %a{:href => "#{portal_posts_path}"} Artigos
         %li
-          %a{:href => "#"} Contact
-    / /.navbar-collapse
-  / /.container
-/ Page Content
+          %a{:href => "#{portal_colunists_path}"} Colunistas
+        %li
+          %a{:href => "#{portal_colunists_path}"} Jurisprudência
+        %li
+          %a{:href => "#{portal_colunists_path}"} Boletim
+        %li
+          %a{:href => "#{portal_colunists_path}"} Banco de Questões
+        %li.dropdown
+          %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            Mais
+            %span.caret
+          %ul.dropdown-menu
+            %li
+              %a{:href => "#"} Categoria 1
+            %li
+              %a{:href => "#"} Categoria 2
+            / /.navbar-collapse
+          / /.container
+        / Page Content

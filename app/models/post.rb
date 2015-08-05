@@ -3,6 +3,9 @@ class Post < ActiveRecord::Base
   belongs_to :author
   belongs_to :reviser
 
+  extend FriendlyId
+  
+  friendly_id :title, use: :slugged
 
   default_scope { where(publish: true, revised: true) }
   

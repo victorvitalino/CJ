@@ -25,8 +25,8 @@ Rails.application.routes.draw do
   namespace :portal, path: '/' do   
     root 'home#index'
     
-    resources :posts
-    resources :colunits
+    resources :posts, path: 'artigos'
+    resources :colunists
   end
 
 end

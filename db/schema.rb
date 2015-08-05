@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20150805132605) do
     t.integer  "post_category_id"
     t.integer  "author_id"
     t.string   "title"
+    t.string   "slug"
     t.text     "content"
     t.string   "meta"
     t.string   "unique_code"
