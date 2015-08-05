@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
 
-  resources :users
-  resources :administrator
+  devise_for :authors
+  devise_for :users
+
   
-  namespace :administrator, path: 'admin' do 
+  namespace :administrator, path: 'autor' do 
     root 'dashboard#index'
     
+    resources :authors
     resources :posts
     resources :post_categories
   end
