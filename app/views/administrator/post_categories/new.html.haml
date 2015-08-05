@@ -1,0 +1,10 @@
+.row
+  .col-sm-12
+    .m-b-md
+      %h3.m-b-none 
+        = link_to "Voltar", administrator_post_categories_path, class: 'pull-right btn btn-default btn-sm'
+        %b Nova Categoria
+.row
+  .col-sm-12
+    .m-b-md
+      = render 'form'

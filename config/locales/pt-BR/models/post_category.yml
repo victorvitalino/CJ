@@ -1,0 +1,10 @@
+pt-BR:
+  activerecord:
+    models:
+      'post_category': 'Categoria de Artigo'
+    attributes:
+      post_category:
+        name: "Nome"
+        description: "Descrição"
+        publish: "Publicado?"
+

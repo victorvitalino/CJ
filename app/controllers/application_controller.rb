@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   private
 
   def set_layout
-    "#{controller_path.split('/').first}/application"
+    "#{controller_path.split('/').first}/application" if !devise_controller?
   end
 end

@@ -1,0 +1,26 @@
+%section.panel.panel-default
+  %header.panel-heading.font-bold Formulário
+  .panel-body
+    = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+      = f.error_notification
+      .row
+        .col-md-4
+          = f.input :name
+        .col-md-4
+          = f.input :email, required: true, autofocus: true
+      .row
+        .col-md-4
+          = f.input :password, autocomplete: "off", hint: "preencha somente se deseja alterar sua senha", required: false
+        .col-md-4
+          = f.input :password_confirmation, required: false
+        .col-md-4
+          = f.input :current_password, hint: "É necessário informar sua senha atual", required: true
+      %hr/
+      .row
+        .col-md-12
+          = f.button :submit, "Update", class: 'btn btn-primary'
+    %hr/
+    %h3 Cancelar minha conta
+    %p
+      #{link_to "Desejo cancelar minha conta!", registration_path(resource_name), data: { confirm: "Are you sure?" }, method:     :delete}
+    

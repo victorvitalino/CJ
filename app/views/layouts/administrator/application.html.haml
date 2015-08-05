@@ -3,8 +3,13 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Portal
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'administrator', media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    = yield
+    %section.vbox
+      = render 'layouts/administrator/partials/nav'
+      %section
+        %section.hbox.strecth
+          #content.container
+            = yield
+    = javascript_include_tag 'administrator', 'data-turbolinks-track' => true

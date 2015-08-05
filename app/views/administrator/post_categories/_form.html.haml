@@ -1,0 +1,18 @@
+%section.panel.panel-default
+  %header.panel-heading.font-bold Formulário
+  .panel-body
+    = simple_form_for [:administrator, @post_category] do |f|
+      .row
+        .col-md-12
+          = f.input :name
+      .row
+        .col-md-12
+          = f.input :description
+      .row
+        .col-md-12
+          = f.input :publish
+      %hr/
+      .row
+        .col-md-12
+          = f.button :submit, class: 'btn btn-primary'
+          = link_to "Voltar", administrator_post_categories_path, class: 'btn btn-default'

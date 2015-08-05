@@ -1,0 +1,268 @@
+.aside
+  %aside#nav.bg-black.aside-md.hidden-print.hidden-xs
+    %section.vbox
+      %section.w-f.scrollable
+        .slim-scroll{"data-disable-fade-out" => "true", "data-distance" => "0", "data-height" => "auto", "data-railopacity" => "0.2", "data-size" => "10px"}
+          .clearfix.wrapper.dk.nav-user.hidden-xs
+            .dropdown
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                %span.thumb.avatar.pull-left.m-r
+                  %img.dker{:alt => "...", :src => "images/a0.png"}/
+                  %i.on.md.b-black
+                %span.hidden-nav-xs.clear
+                  %span.block.m-t-xs
+                    %strong.font-bold.text-lt John.Smith
+                    %b.caret
+                  %span.text-muted.text-xs.block Art Director
+              %ul.dropdown-menu.animated.fadeInRight.m-t-xs
+                %li
+                  %span.arrow.top.hidden-nav-xs
+                  %a{:href => "#"} Settings
+                %li
+                  %a{:href => "profile.html"} Profile
+                %li
+                  %a{:href => "#"}
+                    %span.badge.bg-danger.pull-right 3
+                    Notifications
+                %li
+                  %a{:href => "docs.html"} Help
+                %li.divider
+                %li
+                  %a{"data-toggle" => "ajaxModal", :href => "modal.lockme.html"} Logout
+          / nav
+          %nav.nav-primary.hidden-xs
+            .text-muted.text-sm.hidden-nav-xs.padder.m-t-sm.m-b-sm Start
+            %ul.nav.nav-main{"data-ride" => "collapse"}
+              %li.active
+                %a.auto{:href => "index.html"}
+                  %i.i.i-statistics.icon
+                  %span.font-bold Overview
+              %li
+                %a.auto{:href => "#"}
+                  %span.pull-right.text-muted
+                    %i.i.i-circle-sm-o.text
+                    %i.i.i-circle-sm.text-active
+                  %b.badge.bg-danger.pull-right 4
+                  %i.i.i-stack.icon
+                  %span.font-bold Layouts
+                %ul.nav.dk
+                  %li
+                    %a.auto{:href => "layout-color.html"}
+                      %i.i.i-dot
+                      %span Color option
+                  %li
+                    %a.auto{:href => "layout-hbox.html"}
+                      %i.i.i-dot
+                      %span Hbox layout
+                  %li
+                    %a.auto{:href => "layout-boxed.html"}
+                      %i.i.i-dot
+                      %span Boxed layout
+                  %li
+                    %a.auto{:href => "layout-fluid.html"}
+                      %i.i.i-dot
+                      %span Fluid layout
+              %li
+                %a.auto{:href => "#"}
+                  %span.pull-right.text-muted
+                    %i.i.i-circle-sm-o.text
+                    %i.i.i-circle-sm.text-active
+                  %i.i.i-lab.icon
+                  %span.font-bold UI kit
+                %ul.nav.dk
+                  %li
+                    %a.auto{:href => "buttons.html"}
+                      %i.i.i-dot
+                      %span Buttons
+                  %li
+                    %a.auto{:href => "icons.html"}
+                      %b.badge.bg-info.pull-right 3
+                      %i.i.i-dot
+                      %span Icons
+                  %li
+                    %a.auto{:href => "grid.html"}
+                      %i.i.i-dot
+                      %span Grid
+                  %li
+                    %a.auto{:href => "widgets.html"}
+                      %b.badge.bg-dark.pull-right 8
+                      %i.i.i-dot
+                      %span Widgets
+                  %li
+                    %a.auto{:href => "components.html"}
+                      %i.i.i-dot
+                      %span Components
+                  %li
+                    %a.auto{:href => "list.html"}
+                      %i.i.i-dot
+                      %span List group
+                  %li
+                    %a.auto{:href => "#table"}
+                      %span.pull-right.text-muted
+                        %i.i.i-circle-sm-o.text
+                        %i.i.i-circle-sm.text-active
+                      %i.i.i-dot
+                      %span Table
+                    %ul.nav.dker
+                      %li
+                        %a{:href => "table-static.html"}
+                          %i.i.i-dot
+                          %span Table static
+                      %li
+                        %a{:href => "table-datatable.html"}
+                          %b.label.bg-dark.pull-right 1.10
+                          %i.i.i-dot
+                          %span Datatable
+                  %li
+                    %a.auto{:href => "#form"}
+                      %span.pull-right.text-muted
+                        %i.i.i-circle-sm-o.text
+                        %i.i.i-circle-sm.text-active
+                      %i.i.i-dot
+                      %span Form
+                    %ul.nav.dker
+                      %li
+                        %a{:href => "form-elements.html"}
+                          %i.i.i-dot
+                          %span Form elements
+                      %li
+                        %a{:href => "form-validation.html"}
+                          %i.i.i-dot
+                          %span Form validation
+                      %li
+                        %a{:href => "form-wizard.html"}
+                          %i.i.i-dot
+                          %span Form wizard
+                  %li
+                    %a.auto{:href => "chart.html"}
+                      %i.i.i-dot
+                      %span Chart
+                  %li
+                    %a.auto{:href => "portlet.html"}
+                      %i.i.i-dot
+                      %span Portlet
+                  %li
+                    %a.auto{:href => "timeline.html"}
+                      %i.i.i-dot
+                      %span Timeline
+              %li
+                %a.auto{:href => "#"}
+                  %span.pull-right.text-muted
+                    %i.i.i-circle-sm-o.text
+                    %i.i.i-circle-sm.text-active
+                  %i.i.i-docs.icon
+                  %span.font-bold Pages
+                %ul.nav.dk
+                  %li
+                    %a.auto{:href => "profile.html"}
+                      %i.i.i-dot
+                      %span Profile
+                  %li
+                    %a.auto{:href => "profile-2.html"}
+                      %i.i.i-dot
+                      %span Profile 2
+                  %li
+                    %a.auto{:href => "search.html"}
+                      %i.i.i-dot
+                      %span Search
+                  %li
+                    %a.auto{:href => "invoice.html"}
+                      %i.i.i-dot
+                      %span Invoice
+                  %li
+                    %a.auto{:href => "intro.html"}
+                      %i.i.i-dot
+                      %span Intro
+                  %li
+                    %a.auto{:href => "master.html"}
+                      %i.i.i-dot
+                      %span Master
+                  %li
+                    %a.auto{:href => "gmap.html"}
+                      %i.i.i-dot
+                      %span Google Map
+                  %li
+                    %a.auto{:href => "jvectormap.html"}
+                      %i.i.i-dot
+                      %span Vector Map
+                  %li
+                    %a.auto{:href => "signin.html"}
+                      %i.i.i-dot
+                      %span Signin
+                  %li
+                    %a.auto{:href => "signup.html"}
+                      %i.i.i-dot
+                      %span Signup
+                  %li
+                    %a.auto{:href => "404.html"}
+                      %i.i.i-dot
+                      %span 404
+              %li
+                %a.auto{:href => "#"}
+                  %span.pull-right.text-muted
+                    %i.i.i-circle-sm-o.text
+                    %i.i.i-circle-sm.text-active
+                  %i.i.i-grid2.icon
+                  %span.font-bold Apps
+                %ul.nav.dk
+                  %li
+                    %a.auto{:href => "mail.html"}
+                      %b.badge.bg-success.lt.pull-right 2
+                      %i.i.i-dot
+                      %span Mailbox
+                  %li
+                    %a.auto{:href => "fullcalendar.html"}
+                      %i.i.i-dot
+                      %span Calendar
+                  %li
+                    %a.auto{:href => "project.html"}
+                      %i.i.i-dot
+                      %span Project
+                  %li
+                    %a.auto{:href => "media.html"}
+                      %i.i.i-dot
+                      %span Media
+                  %li
+                    %a.auto{:href => "chat.html"}
+                      %i.i.i-dot
+                      %span Chat
+                  %li
+                    %a.auto{:href => "contacts.html"}
+                      %i.i.i-dot
+                      %span Contacts
+                  %li
+                    %a.auto{:href => "note.html"}
+                      %i.i.i-dot
+                      %span Note
+            .line.dk.hidden-nav-xs
+            .text-muted.text-xs.hidden-nav-xs.padder.m-t-sm.m-b-sm Lables
+            %ul.nav
+              %li
+                %a{:href => "mail.html#work"}
+                  %i.i.i-circle-sm.text-info-dk
+                  %span Work space
+              %li
+                %a{:href => "mail.html#social"}
+                  %i.i.i-circle-sm.text-success-dk
+                  %span Connection
+              %li
+                %a{:href => "mail.html#projects"}
+                  %i.i.i-circle-sm.text-danger-dk
+                  %span Projects
+            .text-muted.text-xs.hidden-nav-xs.padder.m-t-sm.m-b-sm Circles
+            %ul.nav
+              %li
+                %a{:href => "#"}
+                  %i.i.i-circle-sm-o.text-success-lt
+                  %span College
+              %li
+                %a{:href => "#"}
+                  %i.i.i-circle-sm-o.text-warning
+                  %span Social
+          / / nav
+      %footer.footer.hidden-xs.no-padder.text-center-nav-xs
+        %a.btn.btn-icon.icon-muted.btn-inactive.pull-right.m-l-xs.m-r-xs.hidden-nav-xs{"data-toggle" => "ajaxModal", :href => "modal.lockme.html"}
+          %i.i.i-logout
+        %a.btn.btn-icon.icon-muted.btn-inactive.m-l-xs.m-r-xs{"data-toggle" => "class:nav-xs", :href => "#nav"}
+          %i.i.i-circleleft.text
+          %i.i.i-circleright.text-active

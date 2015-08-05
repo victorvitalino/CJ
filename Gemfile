@@ -17,8 +17,12 @@ gem 'haml-rails'
 gem 'simple_form'
 gem 'devise'
 gem 'pundit'
+gem 'carrierwave'
 
 group :development, :test do
+  gem 'guard'
+  gem 'guard-rails'
+  gem 'guard-livereload'
   gem 'sqlite3'
   gem 'byebug'
   gem 'web-console', '~> 2.0'

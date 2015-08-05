@@ -1,0 +1,20 @@
+%section.panel.panel-default
+  %header.panel-heading.font-bold Formulário
+  .panel-body
+    = simple_form_for [:administrator, @colunist] do |f|
+      .row
+        .col-md-4
+          = f.association :author, label_method: :name, value_method: :id, prompt: 'selecione o autor...'
+      .row
+        .col-md-12
+          = f.input :title
+      .row
+        .col-md-12
+          = f.input :description
+        .col-md-12
+          = f.input :publish
+      %hr/
+      .row
+        .col-md-12
+          = f.button :submit, class: 'btn btn-primary'
+          = link_to "Voltar", administrator_colunists_path, class: 'btn btn-default'

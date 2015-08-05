@@ -1,0 +1,65 @@
+%header.bg-white.header.header-md.navbar.box-shadow
+  .navbar-header.container.aside-md.dk
+    %a.btn.btn-link.visible-xs{"data-target" => "#nav,html", "data-toggle" => "class:nav-off-screen,open"}
+      %i.fa.fa-bars
+    %a.navbar-brand{:href => "#{administrator_root_path}"}
+      /  %img.m-r-sm{:alt => "scale", :src => "images/logo.png"}/
+      %span.hidden-nav-xs Conteúdo Jurídico
+    %a.btn.btn-link.visible-xs{"data-target" => ".user", "data-toggle" => "dropdown"}
+      %i.fa.fa-cog
+  %ul.nav.navbar-nav.hidden-xs
+    %li.dropdown
+      %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+        %i.i.i-grid
+      %section.dropdown-menu.aside-lg.bg-white.on.animated.fadeInLeft
+        .row.m-l-none.m-r-none.m-t.m-b.text-center
+          .col-xs-4
+            .padder-v
+              %a{:href => "#{administrator_authors_url}"}
+                %span.m-b-xs.block
+                  %i.i.i-mail.i-2x.text-primary-lt
+                %small.text-muted Autores
+          .col-xs-4
+            .padder-v
+              %a{:href => "#{administrator_posts_url}"}
+                %span.m-b-xs.block
+                  %i.i.i-mail.i-2x.text-primary-lt
+                %small.text-muted Artigos
+          .col-xs-4
+            .padder-v
+              %a{:href => "#{administrator_colunists_url}"}
+                %span.m-b-xs.block
+                  %i.i.i-calendar.i-2x.text-danger-lt
+                %small.text-muted Colunistas
+          .col-xs-4
+            .padder-v
+              %a{:href => "#{administrator_colunists_url}"}
+                %span.m-b-xs.block
+                  %i.i.i-map.i-2x.text-success-lt
+                %small.text-muted Assinantes
+          .col-xs-4
+            .padder-v
+              %a{:href => "#{administrator_contents_url}"}
+                %span.m-b-xs.block
+                  %i.i.i-paperplane.i-2x.text-info-lt
+                %small.text-muted Conteúdo
+          .col-xs-4
+            .padder-v
+              %a{:href => "#{administrator_comments_url}"}
+                %span.m-b-xs.block
+                  %i.i.i-clock.i-2x.text-warning-lter
+                %small.text-muted Comentários
+  %ul.nav.navbar-nav.navbar-right.m-n.hidden-xs.nav-user.user
+    %li.dropdown
+      %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+        %span.thumb-sm.avatar.pull-left
+          / %img{:alt => "...", :src => "images/a0.png"}/
+        = current_author.email
+        %b.caret
+      %ul.dropdown-menu.animated.fadeInRight
+        %li
+          %span.arrow.top
+          = link_to "Meu perfil", edit_author_registration_path
+        %li= link_to "Ajuda"
+        %li.divider
+        %li= link_to "Sair", destroy_author_session_path, method: :delete

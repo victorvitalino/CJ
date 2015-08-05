@@ -1,0 +1,36 @@
+.row
+  .col-sm-12
+    .m-b-md
+      %h3.m-b-none 
+        = link_to "nova coluna", new_administrator_colunist_path, class: 'pull-right btn btn-primary btn-sm'
+        %b Colunistas
+       
+.row
+  .col-sm-12
+    %section.panel.panel-default
+      %header.panel-heading
+        %span.label.bg-success.pull-right.m-t-xs  
+        Listagem
+      %table.table.table-striped.m-b-none
+        %thead
+          %tr
+            %th #
+            %th Título
+            %th Descrição
+            %th Autor
+            %th Publicado
+            %th Ações
+        %tbody
+          - @colunists.each_with_index do |colunist, index|
+            %tr 
+              %td= index + 1
+              %td= colunist.title
+              %td= colunist.description
+              %td= colunist.author.name if colunist.author.present?
+              %td= colunist.publish ? 'publicado' : 'não publicado'
+              %td.col-md-2
+                = link_to "editar", edit_administrator_colunist_path(colunist), class: 'btn btn-info btn-sm'
+                = link_to "excluir", administrator_colunist_path(colunist), method: :delete, class: 'btn btn-danger btn-sm'
+
+
+

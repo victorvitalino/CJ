@@ -1,0 +1,10 @@
+pt-BR:
+  activerecord:
+    models:
+      'post': 'Artigo'
+    attributes:
+      post:
+        title: "Título"
+        content: "Conteúdo"
+        publish: "Publicado?"
+
