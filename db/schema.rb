@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20150805132605) do
     t.string   "name"
     t.text     "description"
     t.boolean  "publish"
+    t.string   "slug"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -62,7 +63,8 @@ ActiveRecord::Schema.define(version: 20150805132605) do
     t.text     "content"
     t.string   "meta"
     t.string   "unique_code"
-    t.string   "special"
+    t.boolean  "special"
+    t.boolean  "featured"
     t.text     "resume"
     t.string   "thumb"
     t.boolean  "publish"

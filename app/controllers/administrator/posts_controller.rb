@@ -11,7 +11,7 @@ module Administrator
 
     def create
       @post = Post.new(set_params)
-
+      @post.author_id = current_author.id
       if @post.save
         flash[:success] = t :success
         redirect_to action: 'index'
@@ -46,11 +46,11 @@ module Administrator
     private
 
     def set_params
-      params.require(:post).permit(:title, :content, :resume, :thumb, :publish ,:meta, :post_category_id)
+      params.require(:post).permit(:title, :content, :resume, :thumb, :publish ,:meta, :post_category_id, :featured, :special)
     end
 
     def set_post
-      @post = Post.unscoped.find(params[:id])
+      @post = Post.unscoped.friendly.find(params[:id])
     end
 
   end

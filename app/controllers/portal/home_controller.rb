@@ -3,6 +3,7 @@ module Portal
     
     def index
       @posts = Post.all.order("created_at DESC")
+      @post  = Post.where(featured: true).first
     end
     
   end

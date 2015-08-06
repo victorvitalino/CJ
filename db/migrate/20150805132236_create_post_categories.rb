@@ -4,6 +4,7 @@ class CreatePostCategories < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.boolean :publish
+      t.string :slug, unique: true
 
       t.timestamps null: false
     end

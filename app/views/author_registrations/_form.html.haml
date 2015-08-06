@@ -7,6 +7,8 @@
         .col-md-4
           = f.input :name
         .col-md-4
+          = f.input :avatar, as: :file
+        .col-md-4
           = f.input :email, required: true, autofocus: true
       .row
         .col-md-4
@@ -18,7 +20,7 @@
       %hr/
       .row
         .col-md-12
-          = f.button :submit, "Update", class: 'btn btn-primary'
+          = f.button :submit, "Atualizar", class: 'btn btn-primary'
     %hr/
     %h3 Cancelar minha conta
     %p

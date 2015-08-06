@@ -26,7 +26,9 @@ Rails.application.routes.draw do
     root 'home#index'
     
     resources :posts, path: 'artigos'
+    resources :post_categories, path: 'categorias'
     resources :colunists
+
   end
 
 end

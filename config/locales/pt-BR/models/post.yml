@@ -8,4 +8,7 @@ pt-BR:
         title: "Título"
         content: "Conteúdo"
         publish: "Publicado?"
+        special: "Destaque"
+        featured: "Destaque Principal"
+        
 

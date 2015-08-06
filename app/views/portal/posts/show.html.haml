@@ -1,0 +1,12 @@
+.col-md-9
+  .row
+    .col-md-12
+      %h2
+        %b= @post.title
+  %hr/
+  .row
+    .col-md-12
+      %p= @post.content
+.col-md-3
+  = render 'portal/home/highlight'
+  = render 'portal/home/most_read'

@@ -1,3 +1,3 @@
 class AuthorSessionsController < Devise::SessionsController
-  layout 'layouts/administrator/application' 
+  layout 'layouts/administrator/sign_in' 
 end

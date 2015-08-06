@@ -1,0 +1,12 @@
+pt-BR:
+  activerecord:
+    models:
+      'author': 'Autor'
+    attributes:
+      author:
+        name: "Nome"
+        email: "E-mail"
+        password: "Senha"
+        password_confirmation: "Confirmação de Senha"
+        current_password: "Senha Atual"
+

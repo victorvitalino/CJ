@@ -8,7 +8,8 @@ class CreatePosts < ActiveRecord::Migration
       t.text :content
       t.string :meta
       t.string :unique_code
-      t.string :special
+      t.boolean :special
+      t.boolean :featured
       t.text   :resume
       t.string  :thumb
       t.boolean :publish

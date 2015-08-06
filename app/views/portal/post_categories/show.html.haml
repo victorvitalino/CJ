@@ -1,11 +1,11 @@
 .row
   .col-md-12
     %h2
-      %b Artigos
+      %b= @category.name.humanize
 %br/
 %br/
 %hr/
-- @posts.order('created_at DESC').each do |post|
+- @posts.each do |post|
   .row
     .col-md-2
       = image_tag post.thumb_url, width: 80

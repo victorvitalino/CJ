@@ -1,11 +1,15 @@
 .row
   .col-md-9
     %br/
-    %img.img-responsive{:alt => "", :src => "http://placehold.it/900x300"}/
-    %h3 A corte Europeia de Direitos Humanos e o excesso prazal: o caso polonês
+    %img.img-responsive{:alt => "", :src => "#{@posts.where(featured: true).first.thumb_url}"}/
+    %h3
+      %b= link_to @post.title, portal_post_path(@post)
     %hr/
     / Post Content
-    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.
+    %p
+      = @post.resume
+
+    %br/
     .row
       .col-md-12
         %h2
