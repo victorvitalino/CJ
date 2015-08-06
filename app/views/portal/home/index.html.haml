@@ -1,7 +1,7 @@
 .row
   .col-md-9
     %br/
-    %img.img-responsive{:alt => "", :src => "#{@posts.where(featured: true).first.thumb_url}"}/
+    %img.img-responsive{:alt => "", :src => "#{@posts.where(featured: true).first.thumb_url if @posts.where(featured: true).first.thumb?}"}/
     %h3
       %b= link_to @post.title, portal_post_path(@post)
     %hr/

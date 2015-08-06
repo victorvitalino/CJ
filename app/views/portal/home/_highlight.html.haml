@@ -7,7 +7,7 @@
       .row
         .col-md-12
           .destaques
-            %img.img-responsive.paddingbottom{:alt => "", :src => "#{post.thumb_url}"}/
+            %img.img-responsive.paddingbottom{:alt => "", :src => "#{post.thumb_url if post.thumb?}"}/
             %h5
               %b= post.title
             %p 
