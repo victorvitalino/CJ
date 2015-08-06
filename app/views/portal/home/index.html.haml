@@ -1,7 +1,8 @@
 .row
   .col-md-9
     %br/
-    %img.img-responsive{:alt => "", :src => "#{@posts.where(featured: true).first.thumb_url if @posts.where(featured: true).first.thumb?}"}/
+    - if @posts.where(featured: true).present?
+      %img.img-responsive{:alt => "", :src => "#{@posts.where(featured: true).first.thumb_url if @posts.where(featured: true).first.thumb?}"}/
     %h3
       %b= link_to @post.title, portal_post_path(@post)
     %hr/
@@ -33,7 +34,7 @@
         .col-md-6.article-home
           .row
             .col-md-4
-              %img.img-responsive{:alt => "", :src => "#{post.thumb_url}"}/
+              %img.img-responsive{:alt => "", :src => "#{post.thumb_url if post.thumb?}"}/
             .col-md-8
               %p
                 %b= link_to post.title, portal_post_path(post)
@@ -49,8 +50,8 @@
         .col-md-6.article-home
           .row
             .col-md-4
-              %img.img-responsive{:alt => "", :src => "#{post.thumb_url}"}/
-            .col-md-8
+              %img.img-responsive{:alt => "", :src => "#{post.thumb_url if post.thumb?}"}/
+            .col-md-8 
               %p
                 %b= link_to post.title, portal_post_path(post)
               %p= post.resume
