@@ -5,4 +5,6 @@
  *= require scale/css/icon
  *= require scale/css/font
  *= require scale/css/app
+ *= require redactor-rails
+
  */

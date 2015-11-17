@@ -3,9 +3,10 @@
   %div
     %h4
       %strong ARTIGOS MAIS LIDOS
-    .row.paddingbottom
-      .col-md-8
-        .artigos-mais-lidos
-          %h5 Lorem ispum dolor sit Lorem ispum t
-      .col-md-4
-        %img.circular{:alt => "", :src => "img/avatar.jpg"}/
+    - 4.times do
+      .row.paddingbottom
+        .col-md-8
+          .artigos-mais-lidos
+            %h5 Lorem ispum dolor sit Lorem ispum t
+        .col-md-4
+          %img.circular{:alt => "", :src => "/user_photo.png", :style => 'height: 44px; overflow: hidden;'}/

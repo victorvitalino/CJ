@@ -6,7 +6,7 @@
   %hr/
   .row
     .col-md-12
-      %p= @post.content
+      %p= @post.content.html_safe
 .col-md-3
   = render 'portal/home/highlight'
   = render 'portal/home/most_read'

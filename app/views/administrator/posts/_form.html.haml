@@ -10,10 +10,10 @@
           = f.input :title
       .row
         .col-md-12
-          = f.input :content
+          = f.input :content, label: false, input_html: { class: 'redactor' }
       .row
         .col-md-12
-          = f.input :resume
+          = f.input :resume, label: false, input_html: { class: 'redactor' }
       .row
         .col-md-4
           = f.input :thumb, as: :file

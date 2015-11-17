@@ -15,6 +15,7 @@ footer {
 }
 .article-home{
   padding-bottom: 20px;
+  min-height: 190px!important;
 }
 .paddingbottom{
   padding-bottom: 10px;
@@ -22,5 +23,5 @@ footer {
 .circular{
   border-radius: 50%;
   -webkit-border-radius: 50%;
-  -moz-border-radius: 50%; 
+  -moz-border-radius: 50%;
 }

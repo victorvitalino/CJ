@@ -1,6 +1,6 @@
 module Administrator
   class PostCategoriesController < ApplicationController
-    
+
     before_action :set_category, only: [:edit, :update, :destroy]
 
     def index
@@ -41,7 +41,7 @@ module Administrator
       end
     end
 
-    
+
     private
 
     def set_params
@@ -49,7 +49,7 @@ module Administrator
     end
 
     def set_category
-      @post_category = PostCategory.unscoped.find(params[:id])
+      @post_category = PostCategory.unscoped.friendly.find(params[:id])
     end
 
   end

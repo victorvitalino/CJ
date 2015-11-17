@@ -18,6 +18,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'pundit'
 gem 'carrierwave'
+gem 'redactor-rails'
 
 gem 'friendly_id', '~> 5.1.0'
 
@@ -30,4 +31,3 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
-

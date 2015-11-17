@@ -10,6 +10,6 @@
             %img.img-responsive.paddingbottom{:alt => "", :src => "#{post.thumb_url if post.thumb?}"}/
             %h5
               %b= post.title
-            %p 
-              = post.resume
+            %p
+              = post.resume.html_safe
       %hr/

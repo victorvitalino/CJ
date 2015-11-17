@@ -14,3 +14,4 @@
 //= require jquery_ujs
 //= require scale/js/bootstrap
 //= require scale/js/app
+//= require redactor-rails
